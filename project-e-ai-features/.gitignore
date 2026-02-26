@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# API Keys — NEVER commit these
+.api-keys
+*.key
+
+# Prisma
+prisma/migrations/*/migration_lock.toml
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+
+# Elasticsearch data (if local)
+esdata/
+
+# Vector embeddings cache (can be large)
+embeddings_cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+*.pid

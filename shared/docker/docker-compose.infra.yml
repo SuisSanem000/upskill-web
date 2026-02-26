@@ -1,0 +1,51 @@
+# Shared infrastructure — run this for any project that needs Postgres, Redis, or Elasticsearch
+# Usage: docker-compose -f shared/docker/docker-compose.infra.yml up -d
+
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: upskill-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: upskill
+      POSTGRES_PASSWORD: upskill123
+      POSTGRES_DB: contacts
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: upskill-redis
+    ports:
+      - "6379:6379"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    container_name: upskill-elasticsearch
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+
+  mongo:
+    image: mongo:7
+    container_name: upskill-mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: upskill
+      MONGO_INITDB_ROOT_PASSWORD: upskill123
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  pg_data:
+  es_data:
+  mongo_data:

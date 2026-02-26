@@ -1,0 +1,52 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*.auto.tfvars
+
+# Docker
+# Don't ignore docker-compose files, only runtime artifacts
+
+# Environment / Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# AWS
+.aws-sam/
+samconfig.toml
+
+# Lambda build artifacts
+aws-lambda/*/node_modules/
+aws-lambda/*/dist/
+aws-lambda/*/.serverless/
+
+# Dependencies (Lambda functions)
+node_modules/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# SSL certs (self-signed for local)
+nginx/ssl/*.pem
+nginx/ssl/*.key
+nginx/ssl/*.crt

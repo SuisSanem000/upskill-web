@@ -1,0 +1,31 @@
+{
+  "name": "project-g-backend",
+  "version": "1.0.0",
+  "description": "Contact List API — Express + MongoDB + Redis + Socket.io + BullMQ",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "seed": "tsx src/seed.ts",
+    "lint": "eslint src/"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongoose": "^8.10.0",
+    "ioredis": "^5.4.0",
+    "socket.io": "^4.8.0",
+    "bullmq": "^5.34.0",
+    "cors": "^2.8.5",
+    "helmet": "^8.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "tsx": "^4.19.0",
+    "@types/express": "^5.0.0",
+    "@types/cors": "^2.8.17",
+    "vitest": "^3.0.0",
+    "eslint": "^9.0.0"
+  }
+}

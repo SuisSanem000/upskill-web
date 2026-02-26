@@ -1,0 +1,37 @@
+{
+  "name": "project-e-ai-features",
+  "version": "1.0.0",
+  "description": "AI-Enhanced Contacts — RAG, pgvector, LangChain, Elasticsearch",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "embed": "tsx src/rag/embedder.ts",
+    "index": "tsx src/elasticsearch/index-contacts.ts",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:generate": "prisma generate"
+  },
+  "dependencies": {
+    "openai": "^4.82.0",
+    "@anthropic-ai/sdk": "^0.37.0",
+    "langchain": "^0.3.0",
+    "@langchain/openai": "^0.4.0",
+    "@langchain/community": "^0.3.0",
+    "@prisma/client": "^6.4.1",
+    "pg": "^8.13.0",
+    "@elastic/elasticsearch": "^8.17.0",
+    "express": "^4.21.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "tsx": "^4.19.0",
+    "prisma": "^6.4.1",
+    "vitest": "^3.0.0",
+    "@types/express": "^5.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/pg": "^8.11.0"
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "email": "alice.johnson@example.com",
+    "phone": "+1-555-0101",
+    "company": "TechCorp",
+    "notes": "Met at React conference 2025",
+    "tags": ["developer", "react"],
+    "isFavorite": true
+  },
+  {
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "email": "bob.smith@example.com",
+    "phone": "+1-555-0102",
+    "company": "DataFlow Inc",
+    "notes": "PostgreSQL expert, good for DB questions",
+    "tags": ["developer", "database"],
+    "isFavorite": false
+  },
+  {
+    "firstName": "Carol",
+    "lastName": "Williams",
+    "email": "carol.w@example.com",
+    "phone": "+1-555-0103",
+    "company": "CloudNine",
+    "notes": "AWS solutions architect",
+    "tags": ["devops", "aws"],
+    "isFavorite": true
+  },
+  {
+    "firstName": "David",
+    "lastName": "Brown",
+    "email": "david.brown@example.com",
+    "phone": "+1-555-0104",
+    "company": "AI Labs",
+    "notes": "Works on RAG pipelines and LLM integration",
+    "tags": ["ai", "ml"],
+    "isFavorite": false
+  },
+  {
+    "firstName": "Eva",
+    "lastName": "Martinez",
+    "email": "eva.m@example.com",
+    "phone": "+1-555-0105",
+    "company": "DesignStudio",
+    "notes": "UI/UX designer, Vue.js enthusiast",
+    "tags": ["designer", "vue"],
+    "isFavorite": false
+  }
+]
